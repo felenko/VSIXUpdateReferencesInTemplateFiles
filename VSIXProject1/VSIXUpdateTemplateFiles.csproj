@@ -45,7 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PackageConfigParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionFilesScanner.cs" />
+    <Compile Include="TemplateFilesProcessor.cs" />
     <Compile Include="UpdateTemplatesCommand.cs" />
     <Compile Include="VSIXUpdateTemplateReferencesPackage.cs" />
   </ItemGroup>
