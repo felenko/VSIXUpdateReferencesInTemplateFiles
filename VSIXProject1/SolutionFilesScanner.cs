@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace VSIXProject1
+namespace VSIXUpdateTemplates
 {
     internal sealed class SolutionFilesScanner
     {

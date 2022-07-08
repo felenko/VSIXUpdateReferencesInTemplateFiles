@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Xml;
 
-namespace VSIXProject1
+namespace VSIXUpdateTemplates
 {
     internal sealed class PackageConfigParser
     {

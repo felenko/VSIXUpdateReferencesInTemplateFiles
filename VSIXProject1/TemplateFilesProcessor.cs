@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace VSIXProject1
+namespace VSIXUpdateTemplates
 {
     internal sealed class TemplateFilesProcessor
     {

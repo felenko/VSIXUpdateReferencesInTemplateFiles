@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using System;
+using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Task = System.Threading.Tasks.Task;
 
-namespace VSIXProject1
+namespace VSIXUpdateTemplates
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -48,6 +49,17 @@ namespace VSIXProject1
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await UpdateTemplatesCommand.InitializeAsync(this);
+
+            //var mcs = await GetServiceAsync(typeof(IMenuCommandService)) as OleMenuCommandService;
+            //var menuCommandId = new CommandID(UpdateTemplatesCommand.CommandSet, UpdateTemplatesCommand.CommandId);
+            //var menuItem = new OleMenuCommand(null, menuCommandId);
+            //menuItem.BeforeQueryStatus += MenuItem_BeforeQueryStatus;
+            //mcs.AddCommand(menuItem);
+        }
+
+        private void MenuItem_BeforeQueryStatus(object sender, EventArgs e)
+        {
+            ((OleMenuCommand)sender).Visible = true;
         }
 
         #endregion Package Members

@@ -1,18 +1,12 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using EnvDTE;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.ComponentModel.Design;
 using System.Diagnostics;
-using System.Globalization;
-using System.Threading;
-using System.Threading.Tasks;
-using EnvDTE;
-using EnvDTE100;
-using Microsoft.VisualStudio.TaskStatusCenter;
-using MSXML;
 using Task = System.Threading.Tasks.Task;
 
-namespace VSIXProject1
+namespace VSIXUpdateTemplates
 {
     /// <summary>
     /// Command handler
@@ -86,7 +80,7 @@ namespace VSIXProject1
             Instance = new UpdateTemplatesCommand(package, commandService);
         }
 
-        private const string title = "UpdateTemplatesCommand";
+        private const string title = "Update Templates";
 
         /// <summary>
         /// This function is the callback used to execute the command when the menu item is clicked.
