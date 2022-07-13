@@ -59,7 +59,7 @@ namespace VSIXUpdateTemplates
 
         private (string package, string version) ExtractPackageAndVersion(string line)
         {
-            var regex = new Regex(@"\\([a-zA-Z.]*)(\d+.\d+.\d+.\d+)\\");
+            var regex = new Regex(@"\\([a-zA-Z0-9.]*)(\d+.\d+.\d+.\d+)\\");
             Match match = regex.Match(line);
             if (match.Success) return (match.Groups[1].Value, match.Groups[2].Value);
             return (null, null);
